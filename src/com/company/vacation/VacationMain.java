@@ -3,15 +3,15 @@ package com.company.vacation;
 public class VacationMain {
 
     public static void main(String[] args) {
+        Person person = new Person();
+        Approval approval = new Approval(person);
+        Vacation vacation = new Vacation(person);
 
-        public void selectVacation();
-        public void checkLeftDays ();
-        public boolean compareVacations ();
-        public void settingApprovalLine ();
-        public boolean getApproval ();
-        public void terminateApproval() ;
-        public void deductVacation ();
-        public void leftVacation ();
-
+        if (vacation.dayOff()) {
+            if (approval.settingApprovalLine(person)) {
+                vacation.deductVacation();
+            }
+        }
+        approval.terminateApproval();
     }
 }
