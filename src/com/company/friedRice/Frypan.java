@@ -13,7 +13,7 @@ public class Frypan {
         return v;
     }
 
-    public <V, R> R fry(V v, R r) {
+    public <M, V, R> R fry(M m, V v, R r) {
         System.out.println("fried both rice and ingredients");
         return r;
     }
