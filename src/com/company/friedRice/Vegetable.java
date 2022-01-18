@@ -1,2 +1,5 @@
-package com.company.friedRice;public class Vegetable {
+package com.company.friedRice;
+
+public class Vegetable {
+
 }
