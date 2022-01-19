@@ -10,14 +10,14 @@ public class Ordering {
         this.money = money;
     }
 
-    public void orderPizza(Pizza PizzaHut, int orderCount) {
-        this.money -= 30000;
-        PizzaHut.order(orderCount);
+    public void orderPizza(Pizza pizza, int orderCount) {
+        this.money -= (30000 * orderCount);
+        pizza.order(orderCount);
     }
 
-    public void orderChicken(Chicken NeNeChicken, int orderCount) {
-        this.money -= 20000;
-        NeNeChicken.order(orderCount);
+    public void orderChicken(Chicken chicken, int orderCount) {
+        this.money -= (20000 * orderCount);
+        chicken.order(orderCount);
     }
 
     public int getOrderId() {
@@ -29,6 +29,6 @@ public class Ordering {
     }
 
     public void info() {
-        System.out.println( " Order Id " + getOrderId() + " left " + getMoney());
+        System.out.println( " Id " + getOrderId() + " 잔액 : " + getMoney());
     }
 }
