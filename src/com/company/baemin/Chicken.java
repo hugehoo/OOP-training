@@ -13,7 +13,7 @@ public class Chicken implements Order{
     @Override
     public void order(int orderCount) {
         ++ this.orderCount;
-        this.totalAmount += 20000;
+        this.totalAmount += (20000 * orderCount);
     }
 
     @Override

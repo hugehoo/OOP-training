@@ -13,12 +13,12 @@ public class Pizza implements Order{
     @Override
     public void order(int orderCount) {
         ++ this.orderCount;
-        this.totalAmount += 30000;
+        this.totalAmount += (30000 * orderCount);
     }
 
     @Override
     public void info() {
-        System.out.println(getStoreName() + " got " + getOrderCount() + " order " + " and earned " + getTotalAmount());
+        System.out.println(getStoreName() + " got " + getOrderCount() + "order " + "and earned " + getTotalAmount());
     }
 
     public String getStoreName() {
