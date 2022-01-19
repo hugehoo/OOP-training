@@ -1,19 +1,19 @@
 package com.company.baemin;
 
-public class Chicken implements Order{
+public class Pizza implements Order{
 
     String storeName;
     int totalAmount = 0;
     int orderCount;
 
-    public Chicken(String storeName) {
+    public Pizza(String storeName) {
         this.storeName = storeName;
     }
 
     @Override
     public void order(int orderCount) {
         ++ this.orderCount;
-        this.totalAmount += 20000;
+        this.totalAmount += 30000;
     }
 
     @Override
