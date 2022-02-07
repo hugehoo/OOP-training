@@ -2,13 +2,13 @@ package com.company.movie;
 
 public class Theater {
 
-    private final Integer theaterCode;
+    private final int theaterCode;
 
-    public Integer getTheaterCode() {
+    public int getTheaterCode() {
         return theaterCode;
     }
 
-    public Theater(Integer theaterCode) {
+    public Theater(int theaterCode) {
         this.theaterCode = theaterCode;
     }
 
@@ -25,7 +25,7 @@ public class Theater {
     }
 
 
-    public String[] getMovieList(Integer theaterCode) {
+    public String[] getMovieList(int theaterCode) {
         switch (theaterCode) {
             case 1:
                 return new String[]{"괴물", "어벤져스"};
