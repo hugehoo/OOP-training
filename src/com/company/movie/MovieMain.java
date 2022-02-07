@@ -6,8 +6,10 @@ public class MovieMain {
         Theater theater = new Theater(3);
         String[] movieOnAir = theater.getMovieList(theater.getTheaterCode());
         String movie = theater.chooseMovie(movieOnAir, "어바웃타임");
-        Pay pay = new Pay();
-        int amount = pay.order(2, "Adult", "A");
+
+        Order order = new Order(theater, movie, 2);
+        order.option("teenager", "A");
+        System.out.println(order.toString());
     }
 
 }
