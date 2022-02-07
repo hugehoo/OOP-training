@@ -60,7 +60,16 @@
 > - order() 메서드에 주문자의 id 값을 삽입하려니 모든 코드를 수정해야한다.
 > - 메뉴를 문자열이 아닌 타입으로 받질 못한다. 메뉴가 추가될 시 일일이 case 문을 추가해야 한다.
 
-> ### 6. 영화 예매 프로그램
+
+> ## 6. Proxy Pattern 을 이용한 Mock DB connection
+0. IConnection 인터페이스에 connect() 추상 메서드를 선언
+1. DB connection 클래스에서 구현한 connect() 메소드를 사용하면 0.5초가 소요된다.
+2. MockClient 클래스에서 connect() 메서드를 호출한다.
+3. IConnection 인터페이스를 구현한 ProxyConnection 클래스를 생성한다.
+4. ProxyConnection 는, 최초 DB connection 에만 DBConnection 객체를 생성하고, 그 다음 부턴 곧 바로 connect() 한다.
+
+
+> ### 7. 영화 예매 프로그램
 1. 영화관을 선택한다.
 2. 영화를 선택한다.
 3. 상영 시간을 선택한다.
