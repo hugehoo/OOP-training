@@ -12,8 +12,8 @@ public class Theater {
         this.theaterCode = theaterCode;
     }
 
-    public static String chooseMovie(Theater theater, String movieName) {
-        String[] movieOnAir = theater.getMovieList(theater.getTheaterCode());
+    // movieOnAir 와 movieName 을 인자로 받는 것이 더 나을 것 같다.
+    public String chooseMovie(String[] movieOnAir, String movieName) {
         String movie = null;
         for (String onAir : movieOnAir) {
             if (onAir.equals(movieName)) {
