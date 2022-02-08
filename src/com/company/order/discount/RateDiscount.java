@@ -1,7 +1,7 @@
 package com.company.order.discount;
 
-import com.company.order.Grade;
-import com.company.order.Member;
+import com.company.order.member.Grade;
+import com.company.order.member.Member;
 
 public class RateDiscount implements Discount {
 

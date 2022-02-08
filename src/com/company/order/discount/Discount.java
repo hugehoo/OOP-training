@@ -1,6 +1,6 @@
 package com.company.order.discount;
 
-import com.company.order.Member;
+import com.company.order.member.Member;
 
 public interface Discount {
 
