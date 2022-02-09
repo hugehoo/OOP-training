@@ -1,9 +1,10 @@
 package com.company.coffeeOrder.menu;
 
-public class Americano implements Menu{
+public class Americano implements Menu {
 
     @Override
-    public void orderMenu() {
+    public int orderMenu() {
         System.out.println("OrderAmericano");
+        return 4500;
     }
 }
