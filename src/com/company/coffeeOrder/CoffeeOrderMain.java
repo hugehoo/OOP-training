@@ -1,19 +1,30 @@
 package com.company.coffeeOrder;
 
 import com.company.coffeeOrder.menu.Americano;
+import com.company.coffeeOrder.menu.Latte;
 import com.company.coffeeOrder.order.ContactOrder;
 import com.company.coffeeOrder.order.Order;
 import com.company.coffeeOrder.menu.Menu;
+import com.company.coffeeOrder.order.SirenOrder;
 import com.company.coffeeOrder.size.GrandeSize;
 import com.company.coffeeOrder.size.Size;
+import com.company.coffeeOrder.size.TallSize;
 
 public class CoffeeOrderMain {
+
+    public int price;
+
+    public CoffeeOrderMain(int price) {
+        this.price = price;
+    }
 
     public void order(Order ordering, Menu menu, Size size) {
 
         ordering.order();
-        menu.orderMenu();
-        size.chooseSize();
+        price = menu.orderMenu();
+        price += size.chooseSize();
+
+        System.out.println("Total Amount is " + price);
 
     }
 
@@ -23,20 +34,24 @@ public class CoffeeOrderMain {
 
 
     public static void main(String[] args) {
-        CoffeeOrderMain ordering1 = new CoffeeOrderMain();
+
+        System.out.println("========== Order1 ==========");
+
+        CoffeeOrderMain order1 = new CoffeeOrderMain(0);
         Order contactOrder = new ContactOrder();
         Menu orderAmericano = new Americano();
-        Size size = new GrandeSize();
-        ordering1.order(contactOrder, orderAmericano, size);
-        ordering1.notifyToCustomer(contactOrder);
+        Size grandeSize = new GrandeSize();
+        order1.order(contactOrder, orderAmericano, grandeSize);
+        order1.notifyToCustomer(contactOrder);
 
+        System.out.println("========== Order2 ==========");
 
-//        Menu latte = ContactOrder.orderLatte();
-
-//        ContactOrder contactOrder = new ContactOrder();
-//        contactOrder.order();
-//        contactOrder.chooseMenu(Menu.AMERICANO);
-//        contactOrder.chooseGrandeSize();
+        CoffeeOrderMain order2 = new CoffeeOrderMain(0);
+        Order sirenOrder = new SirenOrder();
+        Menu orderLatte = new Latte();
+        Size tallSize = new TallSize();
+        order2.order(sirenOrder, orderLatte, tallSize);
+        order2.notifyToCustomer(sirenOrder);
     }
 
 }
