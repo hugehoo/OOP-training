@@ -19,13 +19,11 @@ public class CoffeeOrderMain {
     }
 
     public void order(Order ordering, Menu menu, Size size) {
-
         ordering.order();
         price = menu.orderMenu();
         price += size.chooseSize();
 
         System.out.println("Total Amount is " + price);
-
     }
 
     public void notifyToCustomer(Order ordering) {
