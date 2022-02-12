@@ -11,7 +11,7 @@ public class AirPurifier {
     }
 
     public void purifyLevelUp() {
-        while (powerStatus) {
+        if (powerStatus) {
             if (purifyLevel != 3) {
                 ++purifyLevel;
             } else {
@@ -21,7 +21,7 @@ public class AirPurifier {
     }
 
     public void filterLevelUp() {
-        while (powerStatus) {
+        if (powerStatus) {
             if (filterLevel != 3) {
                 ++filterLevel;
             } else {
