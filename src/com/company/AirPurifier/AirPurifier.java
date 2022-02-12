@@ -12,6 +12,14 @@ public class AirPurifier {
         this.filterLevel = filterLevel;
     }
 
+    public void powerOnOff() {
+        powerStatus = !powerStatus;
+        if (!powerStatus) {
+            purifyLevel = 0;
+            filterLevel = 0;
+        }
+    }
+
     public void purifyLevelUp() {
         if (powerStatus) {
             if (purifyLevel != 3) {
