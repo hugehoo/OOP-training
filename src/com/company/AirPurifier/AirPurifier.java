@@ -6,8 +6,10 @@ public class AirPurifier {
     private int purifyLevel = 1;
     private int filterLevel = 1;
 
-    public void powerOnOff() {
-        powerStatus = !powerStatus;
+    public AirPurifier(Boolean powerStatus, int purifyLevel, int filterLevel) {
+        this.powerStatus = powerStatus;
+        this.purifyLevel = purifyLevel;
+        this.filterLevel = filterLevel;
     }
 
     public void purifyLevelUp() {
@@ -28,5 +30,13 @@ public class AirPurifier {
                 filterLevel = 1;
             }
         }
+    }
+
+    public void showStatus() {
+        System.out.println(
+            "전원 = " + powerStatus
+                + " 필터 레벨 = " + filterLevel
+                + " 청정 레벨 = " + purifyLevel
+        );
     }
 }
